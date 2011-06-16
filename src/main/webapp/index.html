@@ -1,1 +1,59 @@
-Testing, 1, 2, 3.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="ckeditor/ckeditor_source.js"></script>
+</head>
+<body>
+    <textarea id="editor1">
+    	This is an exampl of a sentence with two mispelled words.
+    	Just type text with misspelling to see how it works.
+    </textarea>
+    <script type="text/javascript">
+        // evaluate SCAYT on startup
+        CKEDITOR.config.scayt_autoStartup = true;
+        // needs to migrate your pages to licensed server version from trial
+		// set up your own path to service
+//        CKEDITOR.config.scayt_srcUrl = 'http://ckeditor/plugins/scayt/dialogs/options.js' ;
+        // set up max suggestion count in context menu
+        // all other words will be present in "More Suggestions" sub menu
+        CKEDITOR.config.scayt_maxSuggestions = 4;
+        // needs to migrate to hosted service from trial
+		// set up encrypted customer id 
+//		CKEDITOR.config.scayt_customerid = "encrypted_customer_id";
+		// set up SCAYT default language 
+        CKEDITOR.config.scayt_sLang ="en_GB";
+        // set up dictionaries  (only for licensed version)
+//        CKEDITOR.config.scayt_userDictionaryName = "MyUserDictionaryName";
+//        CKEDITOR.config.scayt_customDictionaryIds = "CustomDictionaryID";
+		// enable/disable the "More Suggestions" sub-menu in the context menu.
+		// The possible values are "on" or "off".
+		CKEDITOR.config.scayt_moreSuggestions = 'off';
+		// customize the display of SCAYT context menu commands ("Add Word", "Ignore"
+		// and "Ignore All"). It must be a string with one or more of the following
+		// words separated by a pipe ("|"):
+		// "off": disables all options.
+		// "all": enables all options.
+		// "ignore": enables the "Ignore" option.
+		// "ignoreall": enables the "Ignore All" option.
+		// "add": enables the "Add Word" option.
+		CKEDITOR.config.scayt_contextCommands = 'add|ignoreall';
+		// set the visibility of the SCAYT tabs in the settings dialog and toolbar
+		// button. The value must contain a "1" (enabled) or "0" (disabled) number for
+		// each of the following entries, in this precise order, separated by a
+		// comma (","): "Options", "Languages" and "Dictionary".
+		CKEDITOR.config.scayt_uiTabs = '1,0,1';
+		// Define order of placing of SCAYT context menu items by groups.
+		// It must be a string with one or more of the following
+		// words separated by a pipe ("|"):
+		// 'suggest' - main suggestion word list
+		// 'moresuggest' - more suggestions word list
+		// 'control' - SCAYT commands, such as 'Ignore' and 'Add Word'
+		CKEDITOR.config.scayt_contextMenuItemsOrder ='moresuggest|control|suggest';
+        // launch CKeditor
+        CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>
+
