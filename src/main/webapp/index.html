@@ -4,6 +4,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="ckeditor/ckeditor_source.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <title>SCAYT Text Box for forms</title>  
+    <script type="text/javascript"   
+            src="http://svc.spellchecker.net/scayt26/loader_Textbox.js"></script>  
 </head>
 <body>
     <textarea id="editor1">
@@ -54,6 +58,17 @@
         // launch CKeditor
         CKEDITOR.replace( 'editor1' );
     </script>
-</body>
-</html>
-
+    <form>  
+        <input name="scayt_input"   
+               size=50   
+               sc_dojoType="scayt.Input"   
+               value="This is an exampl of a sentence with two mispelled words.">  
+                  
+        <textarea   
+                  name="scayt_textarea"   
+                  sc_dojoType="scayt.Textarea"   
+                  cols=40 rows=7>  
+            This is an exampl of a sentence with two mispelled words.</textarea>  
+        </form>          
+    </body>  
+</html>  
