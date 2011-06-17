@@ -17,5 +17,12 @@
         <version>6.1.10</version>
       </plugin>
     </plugins>
-  </build>    
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.ckeditor</groupId>
+      <artifactId>ckeditor-java-core</artifactId>
+      <version>3.5.3</version>
+    </dependency>
+  </dependencies>
 </project>
