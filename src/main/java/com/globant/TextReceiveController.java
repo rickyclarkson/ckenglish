@@ -9,6 +9,7 @@ public class TextReceiveController extends AbstractController {
   @Override
   protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
     ModelAndView modelAndView = new ModelAndView("results.jsp");
+    httpServletRequest.setAttribute("sanitized", "Sane");
     modelAndView.addObject("sanitized", "Sane");
     return modelAndView;
   }
