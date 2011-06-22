@@ -10,7 +10,8 @@
             src="http://svc.spellchecker.net/scayt26/loader_Textbox.js"></script>  
 </head>
 <body>
-    <textarea id="editor1">
+    <form action="receive.htm">
+    <textarea id="editor1" name="text">
     	This is an exampl of a sentence with two mispelled words.
     	Just type text with misspelling to see how it works.
     </textarea>
@@ -58,7 +59,6 @@
         // launch CKeditor
         CKEDITOR.replace( 'editor1' );
     </script>
-    <form>  
         <input name="scayt_input"   
                size=50   
                sc_dojoType="scayt.Input"   
@@ -69,6 +69,7 @@
                   sc_dojoType="scayt.Textarea"   
                   cols=40 rows=7>  
             This is an exampl of a sentence with two mispelled words.</textarea>  
+	    <input type="submit">
         </form>          
     </body>  
 </html>  
