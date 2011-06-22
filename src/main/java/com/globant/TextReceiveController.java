@@ -9,8 +9,8 @@ public class TextReceiveController extends AbstractController {
   @Override
   protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
     ModelAndView modelAndView = new ModelAndView("results.jsp");
-    httpServletRequest.setAttribute("sanitized", httpServletRequest.getParameter("text"));
-    modelAndView.addObject("sanitized", httpServletRequest.getParameter("text"));
+    httpServletRequest.setAttribute("sanitized", new HTMLInputFilter().filter(httpServletRequest.getParameter("text")));
+    modelAndView.addObject("sanitized", new HTMLInputFilter().filter(httpServletRequest.getParameter("text")));
     return modelAndView;
   }
 }
